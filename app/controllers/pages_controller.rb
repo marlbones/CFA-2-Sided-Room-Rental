@@ -11,6 +11,7 @@ class PagesController < ApplicationController
   def guest_dashboard
     @bookings = current_user.bookings
     @approved_bookings = @bookings.approved
+    @paid_bookings = @bookings.paid
 
   end
 end

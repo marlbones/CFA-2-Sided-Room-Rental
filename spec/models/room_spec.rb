@@ -8,7 +8,8 @@ RSpec.describe Room, type: :model do
   end
 
   it "bathroom requires minimum of 1" do
-    room = Room.create(:title => 'great', :bathrooms => nil)
+    # room = Room.create(:title => 'great', :bathrooms => nil)
+    room = build(:room)
     expect(room).to_not be_valid
   end
 

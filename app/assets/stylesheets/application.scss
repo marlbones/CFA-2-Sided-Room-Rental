@@ -16,3 +16,19 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// User styles
+
+.center {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.orange {
+  color: #ffb74d;
+}
+
+.front-img {
+  width: 800px;
+}

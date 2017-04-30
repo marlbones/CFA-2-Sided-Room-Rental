@@ -2,6 +2,21 @@ require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller do
 
+describe "using fixtures" do
+
+  fixtures :users, :rooms
+
+  it "user is valid" do
+    user = users(:marlon)
+    room = rooms(:sydney)
+
+  end
+
+end
+
+
+
+
   describe "GET #guest_dashboard" do
 
     xit "returns http success" do
