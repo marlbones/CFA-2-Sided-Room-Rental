@@ -2,7 +2,7 @@
 
 <h3>Already paid</h3>
 
-<table class = "table">
+<table class = "table table-responsive table-hover">
   <thead>
     <tr>
       <th>Start</th>
@@ -26,7 +26,7 @@
 
 <h3>Ready for Payment</h3>
 
-<table class = "table">
+<table class = "table table-responsive table-hover">
   <thead>
     <tr>
       <th>Start</th>
@@ -51,3 +51,24 @@
 
 
 <h3>Pending Approval</h3>
+
+<table class = "table table-responsive table-hover">
+  <thead>
+    <tr>
+      <th>Start</th>
+      <th>End</th>
+      <th>Cost</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.start_date %></td>
+        <td><%= booking.end_date %></td>
+        <td><%= number_to_currency(booking.room.price) %></td>
+        <td><%= booking.room.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
