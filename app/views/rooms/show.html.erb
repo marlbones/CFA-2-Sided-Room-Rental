@@ -1,70 +1,72 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to "Book Now", new_booking_path(room_id: @room.id), class:'btn btn-primary' %>
+<div>
+  <h3>
+    <strong><%= @room.title %></strong>
+  </h3>
 
-<p>
-  <strong>Title:</strong>
-  <%= @room.title %>
-</p>
+  <% @room.images.each do |image| %>
+    <img src="<%= image.url %>">
+  <% end %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @room.description %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  <%= number_to_currency (@room.price) %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @room.description %>
+  </p>
 
-<p>
-  <strong>Capacity:</strong>
-  <%= @room.capacity %>
-</p>
+  <p>
+    <strong>Price:</strong>
+    <%= number_to_currency (@room.price) %>
+  </p>
 
-<p>
-  <strong>Bathrooms:</strong>
-  <%= @room.bathrooms %>
-</p>
+  <p>
+    <strong>Capacity:</strong>
+    <%= @room.capacity %>
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @room.user.email %>
-</p>
+  <p>
+    <strong>Bathrooms:</strong>
+    <%= @room.bathrooms %>
+  </p>
 
-<p>
-  <strong>Pets:</strong>
-  <%= true_false(@room.pets) %>
-</p>
+  <p>
+    <strong>User:</strong>
+    <%= @room.user.email %>
+  </p>
 
-<p>
-  <strong>Smoking:</strong>
-  <%= @room.smoking %>
-</p>
+  <p>
+    <strong>Pets:</strong>
+    <%= true_false(@room.pets) %>
+  </p>
 
-<p>
-  <strong>Wifi:</strong>
-  <%= @room.wifi %>
-</p>
+  <p>
+    <strong>Smoking:</strong>
+    <%= @room.smoking %>
+  </p>
 
-<p>
-  <strong>Bath:</strong>
-  <%= @room.bath %>
-</p>
+  <p>
+    <strong>Wifi:</strong>
+    <%= @room.wifi %>
+  </p>
 
-<p>
-  <strong>Share:</strong>
-  <%= @room.share %>
-</p>
+  <p>
+    <strong>Bath:</strong>
+    <%= @room.bath %>
+  </p>
 
-<p>
-  <strong>Parties:</strong>
-  <%= @room.parties %>
-</p>
+  <p>
+    <strong>Share:</strong>
+    <%= @room.share %>
+  </p>
 
-<% @room.images.each do |image| %>
-  <img src="<%= image.url %>">
-<% end %>
+  <p>
+    <strong>Parties:</strong>
+    <%= @room.parties %>
+  </p>
 
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+  <%= link_to "Book Now", new_booking_path(room_id: @room.id), class: 'btn btn-default' %>
+
+  <%= link_to 'Edit', edit_room_path(@room), class: 'btn btn-default' %> 
+  <%= link_to 'Back', rooms_path, class: 'btn btn-default' %>
+</div>
