@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div>
-  <h3>
+  <h3 class= "orange">
     <strong><%= @room.title %></strong>
   </h3>
 
@@ -67,6 +67,6 @@
 
   <%= link_to "Book Now", new_booking_path(room_id: @room.id), class: 'btn btn-default' %>
 
-  <%= link_to 'Edit', edit_room_path(@room), class: 'btn btn-default' %> 
+  <%= link_to 'Edit', edit_room_path(@room), class: 'btn btn-default' %>
   <%= link_to 'Back', rooms_path, class: 'btn btn-default' %>
 </div>
